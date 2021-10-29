@@ -4,11 +4,14 @@ library(janitor)
 library(stringr)
 library(sf)
 library(tidyverse)
+library(tmap)
+library(tmaptools)
+library(countrycode)
 
-#Read in the csv file containing country names and geographical data
+#Read in the shapefile containing country names and geographical data
 #"Here" removes the need for me to specify the full path, as it will start from the project folder
 
-CountryData <- read_csv(here("World_Countries_(Generalized).csv")) %>%
+CountryData <- st_read("World_Countries_(Generalized)") %>%
   clean_names() #Neatens the column names, removing the capitalization
 
 #Repeat this process for the data with country names and inequality indices 
@@ -23,11 +26,15 @@ InequalityData <- read_csv(here("Gender Inequality Index (GII).csv"),
                            skip = 5, na = "..",
                            locale = locale(encoding = "latin1")) %>%
   remove_empty(which = "cols", quiet = TRUE) %>%
-  clean_names()
+  clean_names() %>%
+  slice(1:189) %>%
+  #Creates a new column containing an iso code to match columns in CountryData
+  mutate(iso_code=countrycode(country, origin = 'country.name', destination = 'iso2c'))
 
 #The country names from the two dataframes cannot be merged as it stands
 #This is because InequaliyData has a blank space " " before the country name
 #This block of code fixes this problem
+#Because of countrycode, this section now isn't strictly necessary
 
 CountryList <- dplyr::select(InequalityData, country) #Extracts countries as a list
 CountryListTrimmed <- as.list(trimws(CountryList$country, "l")) #Removes the blank spaces
@@ -40,16 +47,22 @@ CleanInequalityData <- mutate(InequalityData, CountryListTrimmed)
 
 JoinedDataFrame <- merge(CountryData, CleanInequalityData,
                          #The titles of the columns with the common value names
-                         by.x = "country", by.y = "CountryListTrimmed") %>%
+                         by.x = "iso", by.y = "iso_code") %>%
   #Creates the new comparison column
   mutate(., InequalityDifference2010s = x2010 - x2019) %>%
   #Reduces the number of columns to just the important ones we want
-  select(country, iso, hdi_rank, shape_length,
-         shape_area, InequalityDifference2010s)
+  select(country.x, iso, geometry, InequalityDifference2010s)
 
 #This calculates and prints a mean value for the change in inequality index across the world
 #"na.rm = TRUE" removes the na values, which prevents "na" from being returned as our output
 MeanChange <- mean(JoinedDataFrame$InequalityDifference2010s, na.rm = TRUE)
 print(MeanChange)
 
-CountriesShapefile <- st_read("World_Countries_(Generalized)")
+#Plot the map with the values colourising the countries
+tm_shape(JoinedDataFrame) +
+  tm_polygons(
+    col = "InequalityDifference2010s",
+    palette="RdYlGn", #Red, Yellow, Green Pallette
+    style="pretty", #Pretty is one of the colouring styles
+    n=8, #Sets eight colour categories
+    midpoint = 0.1) #The value for the bland colour between yellow and green
