@@ -1,0 +1,226 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{HomeworkCommentary}
+\author{Murray Chapman}
+\date{29/10/2021}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={HomeworkCommentary},
+  pdfauthor={Murray Chapman},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{week-5-homework}{%
+\section{Week 5 Homework}\label{week-5-homework}}
+
+By Murray Chapman
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+The following code produces a world map colour coded according to
+changes in inequality level change between the years 2010 and 2019
+according to the UN Gender Inequality Index
+
+\hypertarget{the-code}{%
+\subsection{The code}\label{the-code}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(here) }\CommentTok{\#Load all the necessary packages}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(janitor)}
+\FunctionTok{library}\NormalTok{(stringr)}
+\FunctionTok{library}\NormalTok{(sf)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(tmap)}
+\FunctionTok{library}\NormalTok{(tmaptools)}
+\FunctionTok{library}\NormalTok{(countrycode)}
+
+\CommentTok{\#Read in the shapefile containing country names and geographical data}
+\CommentTok{\#"Here" removes the need for me to specify the full path, as it will start from the project folder}
+
+\NormalTok{CountryData }\OtherTok{\textless{}{-}} \FunctionTok{st\_read}\NormalTok{(}\StringTok{"World\_Countries\_(Generalized)"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{clean\_names}\NormalTok{() }\CommentTok{\#Neatens the column names, removing the capitalization}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Reading layer `World_Countries__Generalized_' from data source 
+##   `/Users/murray/Documents/MResSDSV/GIS/Week4/GIS_Code/World_Countries_(Generalized)' 
+##   using driver `ESRI Shapefile'
+## Simple feature collection with 249 features and 7 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -89 xmax: 180 ymax: 83.6236
+## Geodetic CRS:  WGS 84
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Repeat this process for the data with country names and inequality indices }
+\CommentTok{\#\textquotesingle{}skip = 5\textquotesingle{} removes the first five rows, which are all header material}
+\CommentTok{\#\textquotesingle{}na = ".." removes na values which are stored as ".." in this data set}
+\CommentTok{\#This is necessary as we need the values in the index column to be recognized as numeric}
+\CommentTok{\#remove\_empty() removes the blank columns in this data set, making it neater}
+\CommentTok{\#\textquotesingle{}quiet = True\textquotesingle{} stops the program declaring the columns it\textquotesingle{}s removed}
+\CommentTok{\#\textquotesingle{}\#clean\_names also adds an "x" to columns with numeric titles, making later calculations possible}
+
+\NormalTok{InequalityData }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{here}\NormalTok{(}\StringTok{"Gender Inequality Index (GII).csv"}\NormalTok{),}
+                           \AttributeTok{skip =} \DecValTok{5}\NormalTok{, }\AttributeTok{na =} \StringTok{".."}\NormalTok{,}
+                           \AttributeTok{locale =} \FunctionTok{locale}\NormalTok{(}\AttributeTok{encoding =} \StringTok{"latin1"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{remove\_empty}\NormalTok{(}\AttributeTok{which =} \StringTok{"cols"}\NormalTok{, }\AttributeTok{quiet =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{clean\_names}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{slice}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{189}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\#Creates a new column containing an iso code to match columns in CountryData}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{iso\_code=}\FunctionTok{countrycode}\NormalTok{(country, }\AttributeTok{origin =} \StringTok{\textquotesingle{}country.name\textquotesingle{}}\NormalTok{, }\AttributeTok{destination =} \StringTok{\textquotesingle{}iso2c\textquotesingle{}}\NormalTok{))}
+
+\CommentTok{\#The country names from the two dataframes cannot be merged as it stands}
+\CommentTok{\#This is because InequaliyData has a blank space " " before the country name}
+\CommentTok{\#This block of code fixes this problem}
+\CommentTok{\#Because of countrycode, this section now isn\textquotesingle{}t strictly necessary}
+
+\NormalTok{CountryList }\OtherTok{\textless{}{-}}\NormalTok{ dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(InequalityData, country) }\CommentTok{\#Extracts countries as a list}
+\NormalTok{CountryListTrimmed }\OtherTok{\textless{}{-}} \FunctionTok{as.list}\NormalTok{(}\FunctionTok{trimws}\NormalTok{(CountryList}\SpecialCharTok{$}\NormalTok{country, }\StringTok{"l"}\NormalTok{)) }\CommentTok{\#Removes the blank spaces}
+\CommentTok{\#Adds this fixed list back into the dataframe}
+\NormalTok{CleanInequalityData }\OtherTok{\textless{}{-}} \FunctionTok{mutate}\NormalTok{(InequalityData, CountryListTrimmed)}
+
+\CommentTok{\#This block merges the two dataframes together using their common country names columns}
+\CommentTok{\#**Some data is lost because some country names do not match perfectly}
+\CommentTok{\#The code also produces a new column with the change of index from columns "x2010" and "x2019"}
+
+\NormalTok{JoinedDataFrame }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(CountryData, CleanInequalityData,}
+                         \CommentTok{\#The titles of the columns with the common value names}
+                         \AttributeTok{by.x =} \StringTok{"iso"}\NormalTok{, }\AttributeTok{by.y =} \StringTok{"iso\_code"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\#Creates the new comparison column}
+  \FunctionTok{mutate}\NormalTok{(., }\AttributeTok{InequalityDifference2010s =}\NormalTok{ x2010 }\SpecialCharTok{{-}}\NormalTok{ x2019) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\#Reduces the number of columns to just the important ones we want}
+  \FunctionTok{select}\NormalTok{(country.x, iso, geometry, InequalityDifference2010s)}
+
+\CommentTok{\#This calculates and prints a mean value for the change in inequality index across the world}
+\CommentTok{\#"na.rm = TRUE" removes the na values, which prevents "na" from being returned as our output}
+\NormalTok{MeanChange }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(JoinedDataFrame}\SpecialCharTok{$}\NormalTok{InequalityDifference2010s, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{print}\NormalTok{(MeanChange)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.04991391
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Plot the map with the values colourising the countries}
+\FunctionTok{tm\_shape}\NormalTok{(JoinedDataFrame) }\SpecialCharTok{+}
+  \FunctionTok{tm\_polygons}\NormalTok{(}
+    \AttributeTok{col =} \StringTok{"InequalityDifference2010s"}\NormalTok{,}
+    \AttributeTok{palette=}\StringTok{"RdYlGn"}\NormalTok{, }\CommentTok{\#Red, Yellow, Green Pallette}
+    \AttributeTok{style=}\StringTok{"pretty"}\NormalTok{, }\CommentTok{\#Pretty is one of the colouring styles}
+    \AttributeTok{n=}\DecValTok{8}\NormalTok{, }\CommentTok{\#Sets eight colour categories}
+    \AttributeTok{midpoint =} \FloatTok{0.1}\NormalTok{) }\CommentTok{\#The value for the bland colour between yellow and green}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{HomeworkCommentary_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\end{document}
