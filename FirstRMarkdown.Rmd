@@ -4,10 +4,10 @@ author: "Murray Chapman"
 date: "26/10/2021"
 output: html_document
 ---
+
 ```{r}
 library(raster)
 library(here)
 jan<-raster(here("..", "Week3", "Wc2.1_5m_wind", "wc2.1_5m_wind_01.tif"))
 plot(jan)
 ```
-
